@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet" href="css/salilikanStyles.css">
+	<script src="js/script.js"></script>
+</head>
+<body id = "works">
+    <header>
+	<a href = "index.html"><img src = "image/aleli red logo.jpg" alt="Logo" class= "logo-img"> </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="works.html" class="nav-link">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+	<main>
+		<section class="work-container">    
+    <div class="work-text">
+        <h1>Works</h1>
+        <p>Here are some of my projects! Each one reflects my creativity and growth. 
+        And I'm excited to share my progress with you!</p>
+    </div>
+    
+    <!-- Page 1 -->
+    <div class="work-gallery page1" id="page1"> 
+        <div class="work-item">
+            <img src="image/SALILIKAN_COFFEE POSTER.jpg" alt="project 1" class="works-img">
+            <p class="work-label">Coffee Poster</p>
+        </div>
+        <div class="work-item">
+            <img src="image/Salilikan_BlendingMode.jpg" alt="project 2" class="works-img">
+            <p class="work-label">Blending Mode (Adobe Photoshop)</p>
+        </div>
+        <div class="work-item">
+            <img src="image/rhode poster.jpg" alt="project 3" class="works-img">
+            <p class="work-label">Product Advertisement</p>
+        </div>
+		<div class="work-item">
+            <img src="image/self poster.jpg" alt="project 4" class="works-img">
+            <p class="work-label">Poster (Adobe Photoshop)</p>
+        </div>
+        <div class="work-item">
+            <img src="image/Salilikan_ClippingMask.jpg" alt="project 5" class="works-img">
+            <p class="work-label">Clip Masking (Adobe Photoshop)</p>
+        </div>
+		
+    </div>
+    
+    <!-- Page 2 (initially hidden) -->
+    <div class="work-gallery page2" id="page2" style="display:none;">
+        <div class="work-item">
+            <img src="image/multimedia assets (1).jpg" alt="project 6" class="works-img">
+            <p class="work-label">Male Silhouette with Cloudy Sky (Adobe Photoshop)</p>
+        </div>
+        <div class="work-item">
+            <img src="image/multimedia assets (2).jpg" alt="project 7" class="works-img">
+            <p class="work-label">Contemplative Female with Thought Bubble (Adobe Photoshop)</p>
+        </div>
+		 <div class="work-item">
+            <img src="image/multimedia assets (3).jpg" alt="project 8" class="works-img">
+            <p class="work-label">Worried Female Expression (Adobe Photoshop)</p>
+        </div>
+        <div class="work-item">
+            <img src="image/multimedia assets (4).jpg" alt="project 9" class="works-img">
+            <p class="work-label">Sunny Cloudscape (Adobe Photoshop)</p>
+        </div>
+		<div class="work-item">
+            <img src="image/multimedia assets (5).jpg" alt="project 10" class="works-img">
+            <p class="work-label">Full Moon Scene (Adobe Photoshop)</p>
+        </div>
+        <div class="work-item">
+            <img src="image/multimedia assets (6).jpg" alt="project 11" class="works-img">
+            <p class="work-label">Flashlight in Darkness (Adobe Photoshop)</p>
+        </div>
+		
+    </div>
+    
+    <!-- Pagination buttons -->
+    <div class="pagination">
+        <button class="page-btn active" onclick="showPage(1)">1</button>
+        <button class="page-btn" onclick="showPage(2)">2</button>
+    </div>
+</section>
+
+<div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <div id="caption" class="caption"></div>
+</div>
+	</main>
+	
+	<footer class = "footer">
+				
+
+				<div class="link-column">
+					
+						<ul id="footer-links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About Me</a></li>
+							<li><a href="works.html">Works</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+				</div>
+				
+				
+				<div class="footer-column">
+					<h2>Contact Me</h2>
+					<p>Phone no.: 09682295295</p>
+					<p> Address: Gen.T. Deleon Valenzuela City.</p>	
+					
+					<a href="https://www.facebook.com/mariaaleli.salilican"><img src ="image/facebook logo.jpg" alt = "facebook" class = "footer-socials"> </a>
+					<a href="https://www.instagram.com/aia.aleli/"><img src ="image/inst logo.jpg" alt = "instagram" class = "footer-socials"></a>
+					<img src ="image/mail logo.jpg" alt = "mail" class = "footer-socials">
+				</div>
+				
+				
+				
+				
+				<div class="logo-column">
+				<img src = "image/beigebg logo.jpg" alt="Logo" class= "footer-logo">
+				</div>
+				
+		
+		</footer>
+		<p class = "copyright">COPYRIGHT 2025. ALL RIGHTS RESERVED.</p>
+	
+	
+</body>
+</html>

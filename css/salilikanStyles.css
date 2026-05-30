@@ -1,0 +1,1054 @@
+
+@font-face {
+	font-family: 'Archivo Black';
+	src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Playfair Display';
+	src: url('../fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+nav{ 
+text-align: right;
+padding : 10px;
+
+}
+nav ul{
+	display: inline-block; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+ nav ul li{
+	display: inline-block;
+    margin-right: 15px;
+	
+}
+
+nav ul li a {
+    color : #eedbbf;
+    text-decoration: none;
+	font-size : 20px;
+	display: inline-block;
+    transition: all 0.3s ease; 
+
+}
+
+ul li a:hover{
+	background-color : #FDFFF0;
+	color : #121212;
+	border-radius : 5px;
+	transform: scale(1.1);
+}
+
+header {
+	background-color : #67191f;
+	display : flex;
+	justify-content: space-between;
+	align-items : center;
+	border-bottom: 3px solid #eedbbf;
+	
+}
+.logo-img {
+	width : auto;
+	height : 100px;
+	
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+	font-family: 'Playfair Display', serif;
+	background-color : #67191f;
+	color : #FDFFF0;
+	margin: 0px;
+	overflow-x: hidden;
+    width: 100%;
+
+}
+main {
+    padding-bottom: 60px;
+}
+section {	
+	padding: 20px;
+    margin: 20px auto;
+    background: #eedbbf;
+    border-radius: 5px;
+    max-width: 1200px;
+}
+
+.nav-link {
+    color: #eedbbf;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 9px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.3s ease; 
+}
+
+
+#Home .nav-link[href="index.html"],
+#about .nav-link[href="about.html"],
+#works .nav-link[href="works.html"],
+#contact .nav-link[href="contact.html"] {
+	background-color : #eedbbf;
+    color: #121212;    
+}
+
+
+
+
+/*Home Page*/
+
+.text-content {
+	font-family: 'Playfair Display', sans-serif;
+	font-weight: bold;
+	Display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items : center;
+	text-align : center;
+	
+}
+
+#text-welcome{
+	font-size : 70px;
+	font-family : 'Playfair Display', sans-serif;
+	font-weight : bold;
+}
+
+.home-welcome {
+    background-image: 
+        linear-gradient(rgba(238, 219, 191, 0.6), rgba(238, 219, 191, 0.6)), 
+        url('../image/home bg.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    color: #121212;
+}
+.home-text {
+	font-family : 'Playfair Display', sans-serif;
+	font-size: 30px;
+}
+.story-section{
+	display: flex;
+}
+
+.story-image{
+	height: 600px;
+	width : auto;
+	margin-left :50px;
+	border: solid 10px #FDFFF0;
+	border-radius : 20px;
+	padding: 20px;
+}
+.story-container{
+	background-color: #67191f;
+	margin: 70px;
+	margin-left: -80px;
+	padding : 50px;
+	
+	font-size: 25px;
+	color: #FDFFF0;
+	text-align: center;
+	line-height: 40px;	
+}
+
+.home-btn {
+    background-color: #67191f; 
+    color: #FDFFF0; 
+    border: 2px solid #FDFFF0;
+	padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Playfair Display', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+	text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #FDFFF0;
+    color: #67191f;
+
+}
+
+
+
+
+/*About Page*/
+.video-Container{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	margin-right: 30px;
+	
+}
+.main-video{
+	
+	height: 400px;
+	width: 800px;
+}
+video{
+	height: 400px;
+	width: 800px;
+}
+
+.about-title{
+	font-size : 50px;
+	font-weight: bold;
+	text-align: center;
+	margin-right : -1100px;
+	
+}
+
+.about-img {
+	height :500px;
+	width : auto;
+	border : solid 10px #fdfff0;
+	margin-bottom : 50px;
+}
+
+
+.gallery-img{
+	height :280px;
+	width : auto;
+	border: 20px solid #fdfff0;
+	display: flex;
+	display: inline;
+	border-bottom: 60px solid #fdfff0;
+}
+
+.gallery-photos{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 50px;
+	
+}
+
+.gallery-text{
+	color: #121212;
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+	
+}
+
+.about-container{
+	display : flex;	
+	border-radius : 5px;
+	font-size: 25px;
+	text-align: center;
+	align-items: center;
+    justify-content: space-between;
+	color : #121212;
+	font-family : 'PlayFair Display', serif;
+	
+}
+
+.about-text{
+	font-family : 'Playfair Display', sans-serif;
+	display: flex;
+	text-align: center;
+	line-height: 45px;
+	padding : 50px;
+}
+
+
+/*Work Page*/
+.work-text{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align : center;
+	flex-direction: column;
+	font-size : 20px;
+	color : #121212;
+	
+}
+
+.work-container {
+    max-width: 1000px;
+    margin: 5%	 auto;
+    padding: 40px 20px;
+    font-family: 'poppins', sans-serif;
+}
+
+
+/* Works Header Text */
+.work-text {
+	font-family: 'PlayFair Display', sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.work-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.work-text p {
+    font-size: 1.1rem;
+    color: #121212;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.work-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+	  display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.works-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #eee;
+    object-fit: cover;
+    flex-grow: 1;
+}
+
+.work-label {
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+    color: #444;
+    margin: 0;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 8px;
+}
+
+.page-btn {
+    padding: 8px 16px;
+    border: none;
+    background: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover {
+    background: #121212;
+	color: #eddbbf;
+}
+
+.page-btn.active {
+    background: #67191f;
+    color: #FDFFF0;
+    font-weight: bold;
+}
+
+
+
+/* Lightbox Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.caption {
+  color: #fff;
+  padding: 10px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.close-btn {
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Contact Page*/
+.contact-container {
+   
+    background: #eddbbf;
+    border-radius: 10px;
+    text-align: center;
+	margin: 50px 480px;
+	
+}
+
+.contact-text h2 {
+    font-size: 30px;
+    color: #121212;
+    margin-bottom: 10px;
+}
+
+.contact-text p {
+    color: #121212;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    text-align: left;
+	
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #121212;
+}
+
+.input-group input,
+.input-group textarea {
+	display : flex;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #67191f;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-btn {
+	display: flex;
+	justify-content : center;
+	width: 500px;
+    background: #67191f;
+	font-family: 'Playfair Display', sans-serif;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #fdfff0; 
+	color: #121212;
+	
+}
+
+
+
+
+/*footer*/
+footer{
+	font-family : 'Poppins';
+	background-color : #eedbbf;
+	
+	color : #67191f;
+}
+
+.footer{
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+	text-align: left;
+    gap: 20px;
+}
+
+.link-column{
+	border-right: solid 2px #121212;
+	margin : 5px 0px;
+}
+#footer-links {
+    list-style: none;
+    
+}
+#footer-links a {
+    color: #67191f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-column{
+	border-left: 200px black ;
+}
+.logo-column {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+	font-size: 100px;
+}
+.footer-socials{
+	height: 30px;
+	width: auto;
+}
+
+.footer-logo{
+	width: 150px;
+    height: auto;
+}
+.copyright{
+	background-color: #67191f;
+	color : #fdfff0;
+	font-family: "Archivo Black", sans-serif;
+	text-align : center;
+	padding : 0;
+	margin: 0;
+	display : flex;
+	justify-content: center;
+}	
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* Tablet Landscape (1024px and below) */
+@media screen and (max-width: 1024px) {
+    /* Header */
+    nav {
+        text-align: center;
+    }
+    nav ul {
+        display: flex;
+		
+        justify-content: center;
+        flex-wrap: wrap; 
+        padding: 0;
+    }
+    nav ul li {
+		display: inline-block;
+        margin: 0px 10px;
+		
+    }
+	nav ul li a {
+    text-decoration: none;
+	font-size : 15px;
+	}
+    
+    /* Home Page */
+    #text-welcome {
+        font-size: 50px;
+    }
+    
+    .home-text {
+        font-size: 20px;
+    }
+    
+    .story-image {
+        height: 450px;
+        margin-left: 30px;
+    }
+    
+    .story-container {
+        margin: 40px;
+        font-size: 20px;
+        line-height: 35px;
+    }
+    
+    /* About Page */
+    .main-video, video {
+        height: 300px;
+        width: 600px;
+    }
+    
+    .about-img {
+        height: 400px;
+    }
+    
+    .gallery-img {
+        height: 220px;
+    }
+    
+    /* Works Page */
+    .work-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+    
+    /* Contact Page */
+    .contact-container {
+        margin: 50px 200px;
+    }
+    
+    /* Footer */
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .logo-column {
+        grid-column: span 2;
+        justify-content: center;
+    }
+}
+
+/* Tablet Portrait (768px and below) */
+@media screen and (max-width: 768px) {
+    /* Header */
+    nav {
+        text-align: center;
+    }
+    nav ul {
+        display: flex;
+		
+        justify-content: center;
+        flex-wrap: wrap; 
+        padding: 0;
+    }
+    nav ul li {
+		display: inline-block;
+        margin: 0px 10px;
+		
+    }
+	nav ul li a {
+    text-decoration: none;
+	font-size : 15px;
+	}
+    
+    
+    .logo-img {
+        margin-bottom: 15px;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    /* Home Page */
+    .home-welcome {
+        padding: 60px 20px;
+    }
+    
+    #text-welcome {
+        font-size: 40px;
+    }
+    
+    .home-text {
+        font-size: 18px;
+    }
+    
+    .story-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .story-image {
+        height: 350px;
+        margin: 0 0 20px 0;
+    }
+    
+    .story-container {
+        margin: 0;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+    /* About Page */
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-title {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .about-img {
+        height: 350px;
+        margin-bottom: 20px;
+    }
+    
+    .main-video, video {
+        height: 250px;
+        width: 100%;
+    }
+    
+    .gallery-img {
+        height: 200px;
+        border: 15px solid #fdfff0;
+        border-bottom: 40px solid #fdfff0;
+    }
+    
+    /* Works Page */
+    .work-container {
+        padding: 20px;
+    }
+    
+    .work-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    /* Contact Page */
+    .contact-container {
+        margin: 50px 100px;
+    }
+    
+    .contact-btn {
+        width: 100%;
+    }
+    
+    /* Footer */
+    .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .link-column {
+        border-right: none;
+        border-bottom: 2px solid #121212;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .logo-column {
+        grid-column: span 1;
+    }
+}
+
+/* Mobile Landscape (480px and below) */
+@media screen and (max-width: 480px) {
+    /* Header */
+    nav {
+        text-align: center;
+    }
+    nav ul {
+        display: flex;
+		
+        justify-content: center;
+        flex-wrap: wrap; 
+        padding: 0;
+    }
+    nav ul li {
+		display: inline-block;
+        margin: 0px 10px;
+		
+    }
+	nav ul li a {
+    text-decoration: none;
+	font-size : 15px;
+	}
+    /* Home Page */
+    #text-welcome {
+        font-size: 30px;
+    }
+    
+    .home-text {
+        font-size: 16px;
+    }
+    
+    .story-image {
+        height: 250px;
+    }
+    
+    .story-container {
+        font-size: 16px;
+        line-height: 25px;
+        padding: 20px;
+    }
+    
+    .home-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    /* About Page */
+    .about-title {
+        font-size: 40px;
+    }
+    
+    .about-img {
+        height: 250px;
+    }
+    
+    .main-video, video {
+        height: 180px;
+    }
+    
+    .gallery-img {
+        height: 150px;
+        border: 10px solid #fdfff0;
+        border-bottom: 30px solid #fdfff0;
+    }
+	.about-text p{
+		font-size : 15px;
+		line-height:  15px;
+		
+	}
+	.about-text{
+		width: 100%;
+		margin: 0;
+	}
+    
+    /* Works Page */
+    .work-text h1 {
+        font-size: 2rem;
+    }
+    
+    .work-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .work-item {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Contact Page */
+    .contact-container {
+        margin: 30px 20px;
+        padding: 20px;
+    }
+    
+    .contact-text h2 {
+        font-size: 24px;
+    }
+    
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+    }
+    
+    /*footer*/
+	 .footer {
+        display: none;
+    }
+	.copyright{
+		font-size : 15px;
+	}
+
+}
+
+/* Small Mobile (320px and below) */
+@media screen and (max-width: 320px) {
+    /* Header */
+    .logo-img {
+        height: 60px;
+    }
+    
+    nav {
+        text-align: center;
+    }
+    nav ul {
+        display: flex;
+		
+        justify-content: center;
+        flex-wrap: wrap; 
+        padding: 0;
+    }
+    nav ul li {
+		display: inline-block;
+        margin: 0px 10px;
+		
+    }
+	nav ul li a {
+    text-decoration: none;
+	font-size : 15px;
+	}
+    
+    /* Home Page */
+    #text-welcome {
+        font-size: 24px;
+    }
+    
+    .home-text {
+        font-size: 14px;
+    }
+    
+    .story-image {
+        height: 200px;
+    }
+    
+    .story-container {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 15px;
+    }
+    
+    /* About Page */
+    .about-title {
+        font-size: 30px;
+    }
+    
+    .about-img {
+        height: 200px;
+    }
+	.about-text p{
+		font-size : 10px;
+		line-height:  15px;
+		
+	}
+	.about-text{
+		width: 100%;
+		margin: 0;
+	}
+    
+    .main-video, video {
+        height: 150px;
+    }
+    
+    .gallery-img {
+        height: 120px;
+        border: 8px solid #fdfff0;
+        border-bottom: 25px solid #fdfff0;
+    }
+    
+    /* Works Page */
+    .work-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .work-text p {
+        font-size: 1rem;
+    }
+    
+    /* Contact Page */
+    .contact-text h2 {
+        font-size: 20px;
+    }
+    
+    .contact-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    /* Footer */
+    .footer-column h2 {
+        font-size: 18px;
+    }
+    
+    .footer-socials {
+        height: 20px;
+    }
+    
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+/* Special Cases for Very Small Screens */
+@media screen and (max-width: 280px) {
+    nav {
+        text-align: center;
+    }
+    nav ul {
+        display: flex;
+		
+        justify-content: center;
+        flex-wrap: wrap; 
+        padding: 0;
+    }
+    nav ul li {
+		display: inline-block;
+        margin: 0px 10px;
+		
+    }
+	nav ul li a {
+    text-decoration: none;
+	font-size : 15px;
+	}
+    
+    .logo-img {
+        height: 50px;
+    }
+    
+    #text-welcome {
+        font-size: 20px;
+    }
+    
+    .story-image {
+        height: 180px;
+    }
+    
+    .gallery-img {
+        height: 100px;
+    }
+	/*footer*/
+	 .footer {
+        display: none;
+    }
+	.copyright{
+		font-size : 10px;
+	}
+
+
+
+}

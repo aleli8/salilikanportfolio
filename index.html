@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MY PORTFOLIO</title>
+		<link rel="stylesheet" href="css/salilikanStyles.css">
+		<style>
+		
+		
+		</style>
+		
+		
+	</head>
+	
+	
+	<body>
+		<header>
+			<div>
+				<a href="#home"><img src="image/aleli red logo.jpg" alt="Logo" class="logo-img"></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#home" class="nav-link">Home</a></li>
+					<li><a href="#works">Works</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+		<section id="home" class = "home-welcome">    
+			
+			<div class="text-content">
+				<p id="text-welcome">Exploring creativity, one step at a time. Welcome!</p>
+				<p class = "home-text"> Hi, I'm Maria Aleli! This is where I showcase my portfolio, featuring my latest projects, creative works, and personal insights. 
+				Feel free to explore! <3</p>
+			</div>	
+		</section>
+		
+		<section id="about" class = "story-section">
+			<img src =  "image/aleli pic 1.jpg" alt = "photo" class = "story-image">	
+			
+			
+			<div class = "story-container">
+				<h1>My Story</h1>
+				<p>Hello! I’m Aleli, an IT student who is still learning and exploring the world of technology. I don’t have everything figured out yet, but I’m continuously improving, step by step.
+					This portfolio showcases the projects I’ve worked on as part of my learning journey. Some might be simple, others a bit more complex, but each one represents progress. I’m not an
+					expert—just a student figuring things out and learning along the way.</p>
+				
+				<a href="#works" class="home-btn">View My Work</a>
+			</div>
+		</section>
+		<section class="about-container section-panel">
+			<div class="image-container">
+				<p class="about-title">About Me</p>
+				<img src="image/aleli pic 2.jpg" alt="1st pic" class="about-img">
+			</div>
+			<div class="about-text">
+				<p>I’m Maria Aleli Salilikan, a 20-year-old IT student from Valenzuela City, currently in my third year at Pamantasan ng Lungsod ng Valenzuela. I’m still navigating my way through the world of technology and design, learning something new every day. If you have any advice, feedback, or projects, I’d love to chat!</p>
+			</div>
+		</section>
+		
+		<section id="works" class="work-container section-panel">
+			<div class="work-text">
+				<h1>Works</h1>
+				<p>Here are some of my projects! Each one reflects my creativity and growth. And I'm excited to share my progress with you!</p>
+			</div>
+			<div class="work-gallery page1" id="page1">
+				<div class="work-item">
+					<img src="image/SALILIKAN_COFFEE POSTER.jpg" alt="project 1" class="works-img">
+					<p class="work-label">Coffee Poster</p>
+				</div>
+				<div class="work-item">
+					<img src="image/Salilikan_BlendingMode.jpg" alt="project 2" class="works-img">
+					<p class="work-label">Blending Mode (Adobe Photoshop)</p>
+				</div>
+				<div class="work-item">
+					<img src="image/rhode poster.jpg" alt="project 3" class="works-img">
+					<p class="work-label">Product Advertisement</p>
+				</div>
+				<div class="work-item">
+					<img src="image/self poster.jpg" alt="project 4" class="works-img">
+					<p class="work-label">Poster (Adobe Photoshop)</p>
+				</div>
+				<div class="work-item">
+					<img src="image/Salilikan_ClippingMask.jpg" alt="project 5" class="works-img">
+					<p class="work-label">Clip Masking (Adobe Photoshop)</p>
+				</div>
+			</div>
+			<div class="work-gallery page2" id="page2" style="display:none;">
+				<div class="work-item">
+					<img src="image/multimedia assets (1).jpg" alt="project 6" class="works-img">
+					<p class="work-label">Male Silhouette with Cloudy Sky (Adobe Photoshop)</p>
+				</div>
+				<div class="work-item">
+					<img src="image/multimedia assets (2).jpg" alt="project 7" class="works-img">
+					<p class="work-label">Contemplative Female with Thought Bubble (Adobe Photoshop)</p>
+				</div>
+				<div class="work-item">
+					<img src="image/multimedia assets (3).jpg" alt="project 8" class="works-img">
+					<p class="work-label">Worried Female Expression (Adobe Photoshop)</p>
+				</div>
+				<div class="work-item">
+					<img src="image/multimedia assets (4).jpg" alt="project 9" class="works-img">
+					<p class="work-label">Sunny Cloudscape (Adobe Photoshop)</p>
+				</div>
+				<div class="work-item">
+					<img src="image/multimedia assets (5).jpg" alt="project 10" class="works-img">
+					<p class="work-label">Full Moon Scene (Adobe Photoshop)</p>
+				</div>
+				<div class="work-item">
+					<img src="image/multimedia assets (6).jpg" alt="project 11" class="works-img">
+					<p class="work-label">Flashlight in Darkness (Adobe Photoshop)</p>
+				</div>
+			</div>
+			<div class="pagination">
+				<button class="page-btn active" onclick="showPage(1)">1</button>
+				<button class="page-btn" onclick="showPage(2)">2</button>
+			</div>
+		</section>
+		<section id="contact" class="contact-container">
+			<div class="contact-text">
+				<h2>Contact</h2>
+				<p>Get in touch with me!</p>
+			</div>
+			<div class="form-container">
+				<form class="contact-form">
+					<div class="input-group">
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" placeholder="Your Name" required>
+					</div>
+					<div class="input-group">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" placeholder="Your Email" required>
+					</div>
+					<div class="input-group">
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+					</div>
+					<button type="submit" class="contact-btn">Send Message</button>
+				</form>
+			</div>
+		</section>
+		</main>
+		
+		<footer class = "footer">
+				
+
+				<div class="link-column">
+					
+						<ul id="footer-links">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About Me</a></li>
+							<li><a href="#works">Works</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+				</div>
+				
+				
+				<div class="footer-column">
+					<h2>Contact Me</h2>
+					<p>Phone no.: 09682295295</p>
+					<p> Address: 2267 New Prodon Subd.St. Paul Street Gen.T. Deleon Valenzuela City.</p>	
+					
+					<a href="https://www.facebook.com/mariaaleli.salilican"><img src ="image/facebook logo.jpg" alt = "facebook" class = "footer-socials"> </a>
+					<a href="https://www.instagram.com/aia.aleli/"><img src ="image/inst logo.jpg" alt = "instagram" class = "footer-socials"></a>
+					<img src ="image/mail logo.jpg" alt = "mail" class = "footer-socials">
+				</div>
+				
+				
+				
+				
+				<div class="logo-column">
+					<img src = "image/beigebg logo.jpg" alt="Logo" class= "footer-logo">
+				</div>
+				
+		
+		</footer>
+		<p class = "copyright">COPYRIGHT 2025. ALL RIGHTS RESERVED.</p>
+		<script src="js/script.js"></script>
+	</body>
+	
+</html>
