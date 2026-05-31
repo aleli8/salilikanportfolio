@@ -1,16 +1,22 @@
 function showPage(pageNumber) {
-    // Hide all pages
-    document.getElementById('page1').style.display = 'none';
-    document.getElementById('page2').style.display = 'none';
-    
-    // Show the selected page
-    document.getElementById('page' + pageNumber).style.display = 'grid';
-    
+    // Hide/show only if pagination elements exist on this page
+    const page1 = document.getElementById('page1');
+    const page2 = document.getElementById('page2');
+    const target = document.getElementById('page' + pageNumber);
+
+    if (!page1 || !page2 || !target) return;
+
+    page1.style.display = 'none';
+    page2.style.display = 'none';
+
+    // Show the selected page (your works layout uses grid)
+    target.style.display = 'grid';
+
     // Update active button
     const buttons = document.querySelectorAll('.page-btn');
     buttons.forEach(btn => {
         btn.classList.remove('active');
-        if (btn.textContent == pageNumber) {
+        if (btn.textContent.trim() === String(pageNumber)) {
             btn.classList.add('active');
         }
     });
@@ -25,24 +31,26 @@ document.addEventListener('DOMContentLoaded', function() {
   const caption = document.getElementById('caption');
   const closeBtn = document.querySelector('.close-btn');
 
-  // Add click event to each image
-  galleryImages.forEach(img => {
-    img.addEventListener('click', function() {
-      lightbox.style.display = 'block';
-      lightboxImg.src = this.src;
-      caption.textContent = this.nextElementSibling.textContent;
+  if (lightbox && lightboxImg && caption && closeBtn) {
+    // Add click event to each image
+    galleryImages.forEach(img => {
+      img.addEventListener('click', function() {
+        lightbox.style.display = 'block';
+        lightboxImg.src = this.src;
+        caption.textContent = this.nextElementSibling.textContent;
+      });
     });
-  });
 
-  // Close lightbox
-  closeBtn.addEventListener('click', function() {
-    lightbox.style.display = 'none';
-  });
-
-  // Close when clicking outside image
-  lightbox.addEventListener('click', function(e) {
-    if (e.target !== lightboxImg && e.target !== caption) {
+    // Close lightbox
+    closeBtn.addEventListener('click', function() {
       lightbox.style.display = 'none';
-    }
-  });
+    });
+
+    // Close when clicking outside image
+    lightbox.addEventListener('click', function(e) {
+      if (e.target !== lightboxImg && e.target !== caption) {
+        lightbox.style.display = 'none';
+      }
+    });
+  }
 });

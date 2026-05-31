@@ -105,38 +105,110 @@ section {
 
 /*Home Page*/
 
-.text-content {
+.home-content {
 	font-family: 'Playfair Display', sans-serif;
-	font-weight: bold;
-	Display: flex;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items : center;
-	text-align : center;
-	
+	align-items: center;
+	text-align: center;
+	gap: 24px;
+	max-width: 900px;
+	margin: 0 auto;
 }
 
-#text-welcome{
-	font-size : 70px;
-	font-family : 'Playfair Display', sans-serif;
-	font-weight : bold;
+.home-badge {
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.92rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	border-radius: 999px;
+	border: 1px solid #eedbbf;
+	background: rgba(238, 219, 191, 0.14);
+	color: #FDFFF0;
+}
+
+.home-welcome h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(3rem, 5vw, 5rem);
+	line-height: 1.02;
+	margin: 0;
+	color: #FDFFF0;
+}
+
+.home-subtitle {
+	font-family: 'Poppins', sans-serif;
+	font-size: clamp(1rem, 1.6vw, 1.5rem);
+	line-height: 1.8;
+	max-width: 760px;
+	color: #FDFFF0;
+	margin: 0;
+}
+
+.home-actions {
+	display: flex;
+	gap: 18px;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 12px;
+}
+
+.home-button {
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	padding: 16px 28px;
+	border-radius: 12px;
+	border: 2px solid transparent;
+	transition: all 0.25s ease;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.home-button.primary {
+	background-color: #eedbbf;
+	color: #67191f;
+}
+
+.home-button.secondary {
+	background: transparent;
+	color: #FDFFF0;
+	border-color: #FDFFF0;
+}
+
+.home-button:hover {
+	transform: translateY(-2px);
+}
+
+.home-button.secondary:hover {
+	background: rgba(255,255,255,0.12);
 }
 
 .home-welcome {
-    background-image: 
-        linear-gradient(rgba(238, 219, 191, 0.6), rgba(238, 219, 191, 0.6)), 
-        url('../image/home bg.jpg'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 100px;
-    display: flex;
-    align-items: center;
-    color: #121212;
+	background-color: #eedbbf;
+	background-image: linear-gradient(rgba(238, 219, 191, 0.96), rgba(238, 219, 191, 0.96)), url('../image/home bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 100px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 75vh;
+	color: #121212;
+	margin: 20px auto;
+	border-radius: 24px;
+	box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+	max-width: 1180px;
 }
+
 .home-text {
-	font-family : 'Playfair Display', sans-serif;
+	font-family: 'Playfair Display', sans-serif;
 	font-size: 30px;
 }
+
 .story-section{
 	display: flex;
 }
