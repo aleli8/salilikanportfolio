@@ -124,9 +124,9 @@ section {
 	text-transform: uppercase;
 	padding: 10px 20px;
 	border-radius: 999px;
-	border: 1px solid #eedbbf;
+	border: 2px solid #67191f;
 	background: rgba(238, 219, 191, 0.14);
-	color: #FDFFF0;
+	color: #67191f;
 }
 
 .home-welcome h1 {
@@ -134,7 +134,7 @@ section {
 	font-size: clamp(3rem, 5vw, 5rem);
 	line-height: 1.02;
 	margin: 0;
-	color: #FDFFF0;
+	color: #121212;
 }
 
 .home-subtitle {
@@ -142,7 +142,7 @@ section {
 	font-size: clamp(1rem, 1.6vw, 1.5rem);
 	line-height: 1.8;
 	max-width: 760px;
-	color: #FDFFF0;
+	color: #121212;
 	margin: 0;
 }
 
@@ -168,14 +168,14 @@ section {
 }
 
 .home-button.primary {
-	background-color: #eedbbf;
-	color: #67191f;
+	background-color: #67191f;
+	color: #FDFFF0;
 }
 
 .home-button.secondary {
 	background: transparent;
-	color: #FDFFF0;
-	border-color: #FDFFF0;
+	color: #67191f;
+	border-color: #67191f;
 }
 
 .home-button:hover {
@@ -418,35 +418,58 @@ video{
     margin: 0;
 }
 
-/* Pagination Styles */
-.pagination {
+/* Work category buttons */
+.work-categories {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-    gap: 8px;
+    gap: 14px;
+    margin: 10px 0 25px;
+    flex-wrap: wrap;
 }
 
-.page-btn {
-    padding: 8px 16px;
-    border: none;
-    background: #f0f0f0;
-    color: #333;
+.work-cat-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: 2px solid #67191f;
+    background: transparent;
+    color: #67191f;
     cursor: pointer;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
-.page-btn:hover {
-    background: #121212;
-	color: #eddbbf;
+.work-cat-btn:hover {
+    background: rgba(103, 25, 31, 0.08);
+    transform: translateY(-2px);
 }
 
-.page-btn.active {
+.work-cat-btn.active {
     background: #67191f;
     color: #FDFFF0;
-    font-weight: bold;
 }
+
+.work-placeholder {
+    text-align: center;
+    padding: 30px 10px;
+    color: #121212;
+}
+
+.work-placeholder h2 {
+    color: #121212;
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.work-placeholder p {
+    color: #121212;
+    font-size: 1.1rem;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
 
 
 

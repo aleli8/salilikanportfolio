@@ -1,26 +1,36 @@
-function showPage(pageNumber) {
-    // Hide/show only if pagination elements exist on this page
-    const page1 = document.getElementById('page1');
-    const page2 = document.getElementById('page2');
-    const target = document.getElementById('page' + pageNumber);
-
-    if (!page1 || !page2 || !target) return;
-
-    page1.style.display = 'none';
-    page2.style.display = 'none';
-
-    // Show the selected page (your works layout uses grid)
-    target.style.display = 'grid';
-
-    // Update active button
-    const buttons = document.querySelectorAll('.page-btn');
-    buttons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.textContent.trim() === String(pageNumber)) {
-            btn.classList.add('active');
-        }
-    });
+// Pagination removed from works.html; keeping this function for safety
+function showPage() {
+    // no-op
 }
+
+// Work category switching
+document.addEventListener('DOMContentLoaded', function () {
+  const categoryButtons = document.querySelectorAll('.work-cat-btn');
+  const categoryContents = document.querySelectorAll('.work-category-content');
+
+  if (!categoryButtons.length || !categoryContents.length) return;
+
+  const setActive = (activeCategory) => {
+    categoryButtons.forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.category === activeCategory);
+    });
+
+    categoryContents.forEach((content) => {
+      const shouldShow = content.id === 'work-' + activeCategory;
+      content.style.display = shouldShow ? 'block' : 'none';
+    });
+  };
+
+  categoryButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      setActive(btn.dataset.category);
+    });
+  });
+
+  // Ensure initial state (Graphic Design)
+  setActive('graphic');
+});
+
 
 // Lightbox functionality
 document.addEventListener('DOMContentLoaded', function() {

@@ -36,14 +36,18 @@
 				<h1>Hi, I'm Maria Aleli!<br>Welcome to my portfolio.</h1>
 				<p class="home-subtitle">Exploring creativity one step at a time — from graphic design to web projects. Feel free to look around!</p>
 				<div class="home-actions">
-					<a href="#" class="home-button primary">Download CV</a>
-					<a href="https://www.linkedin.com" target="_blank" class="home-button secondary">LinkedIn</a>
+					<a href="image/Salilikan - Resume.pdf" class="home-button primary" target="_blank" rel="noopener">
+						View CV/Resume
+					</a>
+					<a href="https://www.linkedin.com/in/maria-aleli-salilikan-536805412" target="_blank" class="home-button secondary">LinkedIn</a>
 				</div>
 			</div>
 		</section>
 		
+
+
 		<section id="about" class="story-section">
-			<img src="image/aleli pic 1.jpg" alt="Maria Aleli portrait" class="story-image">
+			<img src="v.jpg" alt=" Aleli portrait" class="story-image">
 			<div class="story-container">
 				<h1>My Story</h1>
 				<p>Hello! I’m Aleli, an IT student who is still learning and exploring the world of technology. 
@@ -51,74 +55,86 @@
 				<a href="#works" class="home-btn">View My Work</a>
 			</div>
 		</section>
-		<section class="about-container section-panel">
-			<div class="image-container">
-				<p class="about-title">About Me</p>
-				<img src="image/aleli pic 2.jpg" alt="1st pic" class="about-img">
-			</div>
-			<div class="about-text">
-				<p>I’m Maria Aleli Salilikan, a 20-year-old IT student from Valenzuela City, currently in my third year at Pamantasan ng Lungsod ng Valenzuela. I’m still navigating my way through the world of technology and design, learning something new every day. If you have any advice, feedback, or projects, I’d love to chat!</p>
-			</div>
-		</section>
+		
+		
 		
 		<section id="works" class="work-container section-panel">
 			<div class="work-text">
 				<h1>Works</h1>
 				<p>Here are some of my projects!</p>
 			</div>
-			<div class="work-gallery page1" id="page1">
-				<div class="work-item">
-					<img src="image/SALILIKAN_COFFEE POSTER.jpg" alt="project 1" class="works-img">
-					<p class="work-label">Coffee Poster</p>
-				</div>
-				<div class="work-item">
-					<img src="image/Salilikan_BlendingMode.jpg" alt="project 2" class="works-img">
-					<p class="work-label">Blending Mode (Adobe Photoshop)</p>
-				</div>
-				<div class="work-item">
-					<img src="image/rhode poster.jpg" alt="project 3" class="works-img">
-					<p class="work-label">Product Advertisement</p>
-				</div>
-				<div class="work-item">
-					<img src="image/self poster.jpg" alt="project 4" class="works-img">
-					<p class="work-label">Poster (Adobe Photoshop)</p>
-				</div>
-				<div class="work-item">
-					<img src="image/Salilikan_ClippingMask.jpg" alt="project 5" class="works-img">
-					<p class="work-label">Clip Masking (Adobe Photoshop)</p>
-				</div>
-			</div>
-			<div class="work-gallery page2" id="page2" style="display:none;">
-				<div class="work-item">
-					<img src="image/multimedia assets (1).jpg" alt="project 6" class="works-img">
-					<p class="work-label">Male Silhouette with Cloudy Sky (Adobe Photoshop)</p>
-				</div>
-				<div class="work-item">
-					<img src="image/multimedia assets (2).jpg" alt="project 7" class="works-img">
-					<p class="work-label">Contemplative Female with Thought Bubble (Adobe Photoshop)</p>
-				</div>
-				<div class="work-item">
-					<img src="image/multimedia assets (3).jpg" alt="project 8" class="works-img">
-					<p class="work-label">Worried Female Expression (Adobe Photoshop)</p>
-				</div>
-				<div class="work-item">
-					<img src="image/multimedia assets (4).jpg" alt="project 9" class="works-img">
-					<p class="work-label">Sunny Cloudscape (Adobe Photoshop)</p>
-				</div>
-				<div class="work-item">
-					<img src="image/multimedia assets (5).jpg" alt="project 10" class="works-img">
-					<p class="work-label">Full Moon Scene (Adobe Photoshop)</p>
-				</div>
-				<div class="work-item">
-					<img src="image/multimedia assets (6).jpg" alt="project 11" class="works-img">
-					<p class="work-label">Flashlight in Darkness (Adobe Photoshop)</p>
-				</div>
-			</div>
-			<div class="pagination">
-				<button class="page-btn active" onclick="showPage(1)">1</button>
-				<button class="page-btn" onclick="showPage(2)">2</button>
-			</div>
-		</section>
+            <!-- Category Buttons -->
+            <div class="work-categories" role="tablist" aria-label="Work categories">
+                <button type="button" class="work-cat-btn active" data-category="graphic">Graphic Design</button>
+                <button type="button" class="work-cat-btn" data-category="website">Website</button>
+                <button type="button" class="work-cat-btn" data-category="arts">Arts</button>
+            </div>
+
+            <!-- Category content (graphic design = all current projects) -->
+            <div class="work-category-content" id="work-graphic" aria-live="polite">
+                <div class="work-gallery" id="work-graphic-design">
+                    <div class="work-item">
+                        <img src="image/SALILIKAN_COFFEE POSTER.jpg" alt="Coffee Poster" class="works-img">
+                        <p class="work-label">Coffee Poster</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="image/Salilikan_BlendingMode.jpg" alt="Blending Mode (Adobe Photoshop)" class="works-img">
+                        <p class="work-label">Blending Mode (Adobe Photoshop)</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="image/rhode poster.jpg" alt="Product Advertisement" class="works-img">
+                        <p class="work-label">Product Advertisement</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="image/self poster.jpg" alt="Poster (Adobe Photoshop)" class="works-img">
+                        <p class="work-label">Poster (Adobe Photoshop)</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="image/Salilikan_ClippingMask.jpg" alt="Clip Masking (Adobe Photoshop)" class="works-img">
+                        <p class="work-label">Clip Masking (Adobe Photoshop)</p>
+                    </div>
+
+                    <div class="work-item">
+                        <img src="image/multimedia assets (1).jpg" alt="Male Silhouette with Cloudy Sky (Adobe Photoshop)" class="works-img">
+                        <p class="work-label">Male Silhouette with Cloudy Sky (Adobe Photoshop)</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="image/multimedia assets (2).jpg" alt="Contemplative Female with Thought Bubble (Adobe Photoshop)" class="works-img">
+                        <p class="work-label">Contemplative Female with Thought Bubble (Adobe Photoshop)</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="image/multimedia assets (3).jpg" alt="Worried Female Expression (Adobe Photoshop)" class="works-img">
+                        <p class="work-label">Worried Female Expression (Adobe Photoshop)</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="image/multimedia assets (4).jpg" alt="Sunny Cloudscape (Adobe Photoshop)" class="works-img">
+                        <p class="work-label">Sunny Cloudscape (Adobe Photoshop)</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="image/multimedia assets (5).jpg" alt="Full Moon Scene (Adobe Photoshop)" class="works-img">
+                        <p class="work-label">Full Moon Scene (Adobe Photoshop)</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="image/multimedia assets (6).jpg" alt="Flashlight in Darkness (Adobe Photoshop)" class="works-img">
+                        <p class="work-label">Flashlight in Darkness (Adobe Photoshop)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-category-content" id="work-website" style="display:none;" aria-live="polite">
+                <div class="work-placeholder">
+                    <h2>Website</h2>
+                    <p>Placeholder section for your future website projects.</p>
+                </div>
+            </div>
+
+            <div class="work-category-content" id="work-arts" style="display:none;" aria-live="polite">
+                <div class="work-placeholder">
+                    <h2>Arts</h2>
+                    <p>Placeholder section for your future arts projects.</p>
+                </div>
+            </div>
+        </section>
 		<section id="contact" class="contact-container">
 			<div class="contact-text">
 				<h2>Contact</h2>
