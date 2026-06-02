@@ -34,33 +34,65 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Lightbox functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Get all gallery images
-  const galleryImages = document.querySelectorAll('.works-img');
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const caption = document.getElementById('caption');
   const closeBtn = document.querySelector('.close-btn');
 
-  if (lightbox && lightboxImg && caption && closeBtn) {
-    // Add click event to each image
-    galleryImages.forEach(img => {
-      img.addEventListener('click', function() {
-        lightbox.style.display = 'block';
-        lightboxImg.src = this.src;
-        caption.textContent = this.nextElementSibling.textContent;
-      });
-    });
+  // Prefer clicking whole cards (work-item), but keep fallback for clicks on images.
+  const cards = document.querySelectorAll('.work-item[data-title][data-description]');
+  const galleryImages = document.querySelectorAll('.works-img');
 
-    // Close lightbox
-    closeBtn.addEventListener('click', function() {
-      lightbox.style.display = 'none';
-    });
+  if (!lightbox || !lightboxImg || !caption || !closeBtn) return;
 
-    // Close when clicking outside image
-    lightbox.addEventListener('click', function(e) {
-      if (e.target !== lightboxImg && e.target !== caption) {
-        lightbox.style.display = 'none';
-      }
+  const openLightbox = (src, title, description) => {
+    lightbox.style.display = 'block';
+    caption.innerHTML = `
+      <div class="lightbox-title" style="font-weight:700; font-size:1.05rem; margin-bottom:6px;">${title || ''}</div>
+      <div class="lightbox-description" style="font-size:0.95rem; opacity:0.95; line-height:1.4;">${description || ''}</div>
+    `;
+    lightboxImg.src = src;
+  };
+
+  const closeLightbox = () => {
+    lightbox.style.display = 'none';
+    lightbox.setAttribute('aria-hidden', 'true');
+  };
+
+  const showLightboxFromCard = (card) => {
+    const img = card.querySelector('img.works-img');
+    if (!img) return;
+    openLightbox(img.src, card.dataset.title, card.dataset.description);
+    lightbox.setAttribute('aria-hidden', 'false');
+  };
+
+  cards.forEach((card) => {
+    card.addEventListener('click', () => showLightboxFromCard(card));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') showLightboxFromCard(card);
     });
-  }
+  });
+
+  // Fallback: if an image is clicked directly.
+  galleryImages.forEach((img) => {
+    img.addEventListener('click', function() {
+      const card = this.closest('.work-item[data-title][data-description]');
+      if (!card) return;
+      showLightboxFromCard(card);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+
+  // Clicking outside the modal content (overlay) closes it.
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Escape closes it.
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.style.display === 'block') {
+      closeLightbox();
+    }
+  });
 });

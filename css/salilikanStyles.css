@@ -114,12 +114,56 @@ section {
 	text-align: center;
 	gap: 24px;
 	max-width: 900px;
-	margin: 0 auto;
+	margin: 0;
 }
+
+.home-welcome-media {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 10px;
+}
+
+.home-welcome-image {
+	width: 100%;
+	max-width: 420px;
+	height: auto;
+	border-radius: 22px;
+	border: 10px solid #FDFFF0;
+	box-shadow: 0 18px 48px rgba(0,0,0,0.18);
+	transform: rotate(2deg);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	object-fit: cover;
+}
+
+.home-welcome-media:hover .home-welcome-image {
+	transform: rotate(0deg) translateY(-2px);
+	box-shadow: 0 24px 70px rgba(0,0,0,0.24);
+}
+
+.home-welcome-media-glow {
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	width: 75%;
+	height: 75%;
+	border-radius: 999px;
+	background: radial-gradient(circle at 30% 30%, rgba(103, 25, 31, 0.22), rgba(103, 25, 31, 0) 65%);
+	filter: blur(8px);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.home-welcome-media .home-welcome-image {
+	position: relative;
+	z-index: 1;
+}
+
 
 .home-badge {
 	font-family: 'Poppins', sans-serif;
-	font-size: 0.92rem;
+	font-size: 0.8rem;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
 	padding: 10px 20px;
@@ -131,7 +175,7 @@ section {
 
 .home-welcome h1 {
 	font-family: 'Playfair Display', serif;
-	font-size: clamp(3rem, 5vw, 5rem);
+	font-size: clamp(1rem, 3vw, 3rem);
 	line-height: 1.02;
 	margin: 0;
 	color: #121212;
@@ -139,7 +183,7 @@ section {
 
 .home-subtitle {
 	font-family: 'Poppins', sans-serif;
-	font-size: clamp(1rem, 1.6vw, 1.5rem);
+	font-size: clamp(0.7rem, 1.5vw, 1.3rem);
 	line-height: 1.8;
 	max-width: 760px;
 	color: #121212;
@@ -192,17 +236,21 @@ section {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	padding: 100px 30px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	padding: 90px 40px;
 	min-height: 75vh;
 	color: #121212;
 	margin: 20px auto;
 	border-radius: 24px;
 	box-shadow: 0 24px 60px rgba(0,0,0,0.22);
 	max-width: 1180px;
+
+	/* new layout */
+	display: grid;
+	grid-template-columns: 1.15fr 0.85fr;
+	align-items: center;
+	gap: 34px;
 }
+
 
 .home-text {
 	font-family: 'Playfair Display', sans-serif;
@@ -210,27 +258,70 @@ section {
 }
 
 .story-section{
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 18px;
+	width: 100%;
+	padding: 55px 24px;
+	min-height: 55vh;
+	background-color: #eedbbf;
+
+	background-image: linear-gradient(rgba(238, 219, 191, 0.96), rgba(238, 219, 191, 0.96)), url('../image/home bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin: 20px auto;
+	border-radius: 24px;
+	box-shadow: 0 20px 50px rgba(0,0,0,0.22);
+	max-width: 1180px;
+	color: #121212;
 }
 
+
 .story-image{
-	height: 600px;
-	width : auto;
-	margin-left :50px;
-	border: solid 10px #FDFFF0;
-	border-radius : 20px;
-	padding: 20px;
+	width: 100%;
+	max-width: 420px;
+
+	height: auto;
+	border-radius: 22px;
+	border: 10px solid #FDFFF0;
+	box-shadow: 0 18px 48px rgba(0,0,0,0.18);
+	transform: rotate(2deg);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	object-fit: cover;
+	padding: 0;
+	margin: 0;
 }
+
+.story-section:hover .story-image{
+	transform: rotate(0deg) translateY(-2px);
+	box-shadow: 0 24px 70px rgba(0,0,0,0.24);
+}
+
+/* subtle “not boring” animation */
+.story-section,
+.story-image,
 .story-container{
-	background-color: #67191f;
-	margin: 70px;
-	margin-left: -80px;
-	padding : 50px;
-	
-	font-size: 25px;
-	color: #FDFFF0;
+	animation: storyFloatIn 700ms ease both;
+}
+
+@keyframes storyFloatIn {
+	from { opacity: 0; transform: translateY(10px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+.story-container{
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	padding: 40px 28px;
+	font-size: 18px;
+	color: #121212;
 	text-align: center;
-	line-height: 40px;	
+	line-height: 40px;
+}
+.story-container p {
+	font-family: 'Poppins', sans-serif;
 }
 
 .home-btn {
@@ -251,6 +342,30 @@ section {
     color: #67191f;
 
 }
+
+/* Make story CTA buttons match Home buttons + tweak spacing */
+.story-container .home-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+}
+.story-container .home-btn{
+    padding: 16px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Ensure spacing stays nice on smaller screens */
+@media screen and (max-width: 768px){
+    .story-container .home-btn{ margin-top: 18px; }
+}
+@media screen and (max-width: 480px){
+    .story-container .home-btn{ margin-top: 14px; padding: 12px 20px; font-size: 14px; border-radius: 10px; }
+}
+
 
 
 
@@ -678,6 +793,18 @@ footer{
 
 /* Tablet Landscape (1024px and below) */
 @media screen and (max-width: 1024px) {
+    .home-welcome {
+        grid-template-columns: 1fr;
+        padding: 70px 20px;
+        gap: 22px;
+    }
+    .home-content {
+        max-width: 760px;
+    }
+    .home-welcome-image {
+        max-width: 520px;
+    }
+
     /* Header */
     nav {
         text-align: center;
@@ -757,6 +884,18 @@ footer{
 
 /* Tablet Portrait (768px and below) */
 @media screen and (max-width: 768px) {
+    .home-welcome {
+        padding: 60px 16px;
+        gap: 18px;
+    }
+    .home-welcome-media {
+        padding: 0;
+    }
+    .home-welcome-image {
+        border-width: 8px;
+        max-width: 420px;
+    }
+
     /* Header */
     nav {
         text-align: center;
@@ -881,6 +1020,11 @@ footer{
 
 /* Mobile Landscape (480px and below) */
 @media screen and (max-width: 480px) {
+    .home-welcome-image {
+        border-width: 6px;
+        max-width: 320px;
+    }
+
     /* Header */
     nav {
         text-align: center;

@@ -7,10 +7,73 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>MY PORTFOLIO</title>
 		<link rel="stylesheet" href="css/salilikanStyles.css">
-		<style>
-		
-		
-		</style>
+		<link rel="stylesheet" href="css/skills_board_additions.css">
+<style>
+				/* ===== Works Cards (fixed card layout + lightbox compatibility) ===== */
+				.work-gallery-works{
+					grid-template-columns: repeat(3, 1fr);
+					gap: 20px;
+				}
+				@media screen and (max-width: 1024px){
+					.work-gallery-works{ grid-template-columns: repeat(2, 1fr); }
+				}
+				@media screen and (max-width: 768px){
+					.work-gallery-works{ grid-template-columns: 1fr; }
+				}
+				.work-item{
+					background:#fff;
+					border-radius:12px;
+					box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+					overflow:hidden;
+					height: 420px;
+					display:flex;
+					flex-direction:column;
+					cursor:pointer;
+				}
+				.work-card-image{
+					height:220px;
+					width:100%;
+					overflow:hidden;
+					flex:0 0 auto;
+				}
+				.works-img{
+					height:220px;
+					width:100%;
+					object-fit: cover;
+					object-position:center;
+					display:block;
+				}
+				.work-card-body{
+					background:#fff;
+					padding:16px;
+					flex:1 1 auto;
+					display:flex;
+					flex-direction:column;
+					gap:10px;
+				}
+				.work-card-title{
+					color:#121212;
+					font-family: 'Poppins', sans-serif;
+					font-size:1.05rem;
+					margin:0;
+				}
+				.work-card-desc{
+					color:#6a6a6a;
+					font-family: 'Poppins', sans-serif;
+					font-size:0.95rem;
+					margin:0;
+					line-height:1.35;
+				}
+				.work-card-tag{
+					margin-top:auto;
+					font-family: 'Poppins', sans-serif;
+					font-weight:600;
+					color:#67191f;
+					font-size:0.9rem;
+					margin-bottom:0;
+				}
+			</style>
+
 		
 		
 	</head>
@@ -40,15 +103,22 @@
 						View CV/Resume
 					</a>
 					<a href="https://www.linkedin.com/in/maria-aleli-salilikan-536805412" target="_blank" class="home-button secondary">LinkedIn</a>
-				</div>
+					</div>
+			</div>
+
+			<div class="home-welcome-media" aria-hidden="true">
+				<img src="image/aleli pic 1.jpg" alt="" class="home-welcome-image">
+				<div class="home-welcome-media-glow"></div>
 			</div>
 		</section>
+
 		
 
 
 		<section id="about" class="story-section">
-			<img src="v.jpg" alt=" Aleli portrait" class="story-image">
+			<img src="image/aleli photo.jpg" alt="Aleli portrait" class="story-image">
 			<div class="story-container">
+
 				<h1>My Story</h1>
 				<p>Hello! I’m Aleli, an IT student who is still learning and exploring the world of technology. 
 					This portfolio showcases the projects I’ve worked on as part of my learning journey.</p>
@@ -63,78 +133,325 @@
 				<h1>Works</h1>
 				<p>Here are some of my projects!</p>
 			</div>
-            <!-- Category Buttons -->
-            <div class="work-categories" role="tablist" aria-label="Work categories">
-                <button type="button" class="work-cat-btn active" data-category="graphic">Graphic Design</button>
-                <button type="button" class="work-cat-btn" data-category="website">Website</button>
-                <button type="button" class="work-cat-btn" data-category="arts">Arts</button>
-            </div>
+            <!-- Category Buttons (removed - show all works) -->
 
-            <!-- Category content (graphic design = all current projects) -->
-            <div class="work-category-content" id="work-graphic" aria-live="polite">
-                <div class="work-gallery" id="work-graphic-design">
-                    <div class="work-item">
-                        <img src="image/SALILIKAN_COFFEE POSTER.jpg" alt="Coffee Poster" class="works-img">
-                        <p class="work-label">Coffee Poster</p>
+            <!-- All category content (single gallery) -->
+<div class="work-category-content" id="work-graphic" aria-live="polite">
+
+                <div class="work-gallery work-gallery-works" id="work-graphic-design">
+
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Coffee Poster"
+                        data-description="A coffee-themed poster design that highlights color, typography, and layout balance."
+                        aria-label="Open Coffee Poster">
+                        <div class="work-card-image">
+                            <img src="image/SALILIKAN_COFFEE POSTER.jpg" alt="Coffee Poster" class="works-img">
+                        </div>
+<div class="work-card-body">
+                            <p class="work-card-title"><b>Coffee Poster</b></p>
+                            <p class="work-card-desc">A coffee-themed poster design that highlights color, typography, and layout balance.</p>
+                            <p class="work-card-tag">Tool/Tag: Adobe Photoshop</p>
+                        </div>
                     </div>
-                    <div class="work-item">
-                        <img src="image/Salilikan_BlendingMode.jpg" alt="Blending Mode (Adobe Photoshop)" class="works-img">
-                        <p class="work-label">Blending Mode (Adobe Photoshop)</p>
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Blending Mode Poster"
+                        data-description="Experimenting with blending modes to create depth, texture, and a cohesive visual mood."
+                        aria-label="Open Blending Mode Poster">
+                        <div class="work-card-image">
+                            <img src="image/Salilikan_BlendingMode.jpg" alt="Blending Mode (Adobe Photoshop)" class="works-img">
+                        </div>
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Blending Mode </b></p>
+                            <p class="work-card-desc">Experimenting with blending modes to create depth, texture, and a cohesive visual mood.</p>
+                            <p class="work-card-tag">Tool/Tag: Adobe Photoshop</p>
+                        </div>
                     </div>
-                    <div class="work-item">
-                        <img src="image/rhode poster.jpg" alt="Product Advertisement" class="works-img">
-                        <p class="work-label">Product Advertisement</p>
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Product Advertisement"
+                        data-description="A focused product advertisement layout designed to grab attention and communicate value clearly."
+                        aria-label="Open Product Advertisement">
+                        <div class="work-card-image">
+                            <img src="image/rhode poster.jpg" alt="Product Advertisement" class="works-img">
+                        </div>
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Product Advertisement</b></p>
+                            <p class="work-card-desc">A focused product advertisement layout designed to grab attention and communicate value clearly.</p>
+                            <p class="work-card-tag">Tool/Tag: Graphic Layout</p>
+                        </div>
                     </div>
-                    <div class="work-item">
-                        <img src="image/self poster.jpg" alt="Poster (Adobe Photoshop)" class="works-img">
-                        <p class="work-label">Poster (Adobe Photoshop)</p>
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Personal Poster"
+                        data-description="A clean poster composition showcasing poster typography and image integration."
+                        aria-label="Open Poster (Adobe Photoshop)">
+                        <div class="work-card-image">
+                            <img src="image/self poster.jpg" alt="Personal Poster" class="works-img">
+                        </div>
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Poster (Adobe Photoshop)</b></p>
+                            <p class="work-card-desc">A clean poster composition showcasing poster typography and image integration.</p>
+                            <p class="work-card-tag">Tool/Tag: Adobe Photoshop</p>
+                        </div>
                     </div>
-                    <div class="work-item">
-                        <img src="image/Salilikan_ClippingMask.jpg" alt="Clip Masking (Adobe Photoshop)" class="works-img">
-                        <p class="work-label">Clip Masking (Adobe Photoshop)</p>
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Clip Masking "
+                        data-description="Using clip masking techniques to shape visuals precisely and improve overall composition."
+                        aria-label="Open Clip Masking ">
+                        <img src="image/Salilikan_ClippingMask.jpg" alt="Clip Masking " class="works-img">
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Clip Masking </b></p>
+                            <p class="work-card-desc">Using clip masking techniques to shape visuals precisely and improve overall composition.</p>
+                            <p class="work-card-tag">Tool/Tag: Adobe Photoshop</p>
+                        </div>
                     </div>
 
-                    <div class="work-item">
-                        <img src="image/multimedia assets (1).jpg" alt="Male Silhouette with Cloudy Sky (Adobe Photoshop)" class="works-img">
-                        <p class="work-label">Male Silhouette with Cloudy Sky (Adobe Photoshop)</p>
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Male Silhouette with Cloudy Sky "
+                        data-description="A moody silhouette composition created by combining layers for atmosphere and contrast."
+                        aria-label="Open Male Silhouette with Cloudy Sky">
+                        <img src="image/multimedia assets (1).jpg" alt="Male Silhouette with Cloudy Sky " class="works-img">
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Male Silhouette with Cloudy Sky</b></p>
+                            <p class="work-card-desc">A moody silhouette composition created by combining layers for atmosphere and contrast.</p>
+                            <p class="work-card-tag">Tool/Tag: Adobe Photoshop</p>
+                        </div>
                     </div>
-                    <div class="work-item">
-                        <img src="image/multimedia assets (2).jpg" alt="Contemplative Female with Thought Bubble (Adobe Photoshop)" class="works-img">
-                        <p class="work-label">Contemplative Female with Thought Bubble (Adobe Photoshop)</p>
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Contemplative Female"
+                        data-description="A storytelling image concept designed with thoughtful composition and layered elements."
+                        aria-label="Open Contemplative Female with Thought Bubble ">
+                        <img src="image/multimedia assets (2).jpg" alt="Contemplative Female with Thought Bubble" class="works-img">
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Contemplative Female with Thought Bubble</b></p>
+                            <p class="work-card-desc">A storytelling image concept designed with thoughtful composition and layered elements.</p>
+                            <p class="work-card-tag">Tool/Tag: Adobe Photoshop</p>
+                        </div>
                     </div>
-                    <div class="work-item">
-                        <img src="image/multimedia assets (3).jpg" alt="Worried Female Expression (Adobe Photoshop)" class="works-img">
-                        <p class="work-label">Worried Female Expression (Adobe Photoshop)</p>
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Worried Female Expression"
+                        data-description="An emotional visual created by blending and refining layers for realistic expression and lighting."
+                        aria-label="Open Worried Female Expression">
+                        <img src="image/multimedia assets (3).jpg" alt="Worried Female Expression" class="works-img">
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Worried Female Expression</b></p>
+                            <p class="work-card-desc">An emotional visual created by blending and refining layers for realistic expression and lighting.</p>
+                            <p class="work-card-tag">Tool/Tag: Adobe Photoshop</p>
+                        </div>
                     </div>
-                    <div class="work-item">
-                        <img src="image/multimedia assets (4).jpg" alt="Sunny Cloudscape (Adobe Photoshop)" class="works-img">
-                        <p class="work-label">Sunny Cloudscape (Adobe Photoshop)</p>
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Sunny Cloudscape"
+                        data-description="A bright cloudscape design focusing on color harmony and atmospheric clarity."
+                        aria-label="Open Sunny Cloudscape">
+                        <img src="image/multimedia assets (4).jpg" alt="Sunny Cloudscape" class="works-img">
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Sunny Cloudscape</b></p>
+                            <p class="work-card-desc">A bright cloudscape design focusing on color harmony and atmospheric clarity.</p>
+                            <p class="work-card-tag">Tool/Tag: Adobe Photoshop</p>
+                        </div>
                     </div>
-                    <div class="work-item">
-                        <img src="image/multimedia assets (5).jpg" alt="Full Moon Scene (Adobe Photoshop)" class="works-img">
-                        <p class="work-label">Full Moon Scene (Adobe Photoshop)</p>
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Full Moon Scene"
+                        data-description="A nighttime scene with contrast and lighting effects to emphasize mood and depth."
+                        aria-label="Open Full Moon Scene">
+                        <img src="image/multimedia assets (5).jpg" alt="Full Moon Scene" class="works-img">
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Full Moon Scene</b></p>
+                            <p class="work-card-desc">A nighttime scene with contrast and lighting effects to emphasize mood and depth.</p>
+                            <p class="work-card-tag">Tool/Tag: Adobe Photoshop</p>
+                        </div>
                     </div>
-                    <div class="work-item">
-                        <img src="image/multimedia assets (6).jpg" alt="Flashlight in Darkness (Adobe Photoshop)" class="works-img">
-                        <p class="work-label">Flashlight in Darkness (Adobe Photoshop)</p>
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Flashlight in Darkness"
+                        data-description="A dramatic dark-to-light composition designed to highlight illumination and focus."
+                        aria-label="Open Flashlight in Darkness">
+                        <img src="image/multimedia assets (6).jpg" alt="Flashlight in Darkness" class="works-img">
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Flashlight in Darkness</b></p>
+                            <p class="work-card-desc">A dramatic dark-to-light composition designed to highlight illumination and focus.</p>
+                            <p class="work-card-tag">Tool/Tag: Adobe Photoshop</p>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Character Animation "
+                        data-description="Simple character animation demonstrating basic motion principles."
+                        aria-label="Open Character Animation 1">
+                        <div class="work-card-image">
+                            <img src="image/character animation1.jpg" alt="Character Animation 1" class="works-img">
+                        </div>
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Character Animation 1</b></p>
+                            <p class="work-card-desc">Simple character animation demonstrating basic motion principles.</p>
+                            <p class="work-card-tag">🔧 Animation</p>
+                        </div>
+                    </div>
+
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Character Animation "
+                        data-description="Simple character animation continuing the motion study with a different pose and timing."
+                        aria-label="Open Character Animation 2">
+                        <div class="work-card-image">
+                            <img src="image/character animation2.jpg" alt="Character Animation 2" class="works-img">
+                        </div>
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Character Animation 2</b></p>
+                            <p class="work-card-desc">Simple character animation continuing the motion study with a different pose and timing.</p>
+                            <p class="work-card-tag">🔧 Animation</p>
+                        </div>
+                    </div>
+
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Camanavigo"
+                        data-description="UI design concept focused on layout, spacing, and user-friendly screens."
+                        aria-label="Open Camanavigo (UI Design)">
+                        <div class="work-card-image">
+                            <img src="image/camanavigo.jpg" alt="Camanavigo" class="works-img">
+                        </div>
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Camanavigo (UI Design)</b></p>
+                            <p class="work-card-desc">UI design concept focused on layout, spacing, and user-friendly screens.</p>
+                            <p class="work-card-tag">🔧 UI Design</p>
+                        </div>
+                    </div>
+
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Notes Flowershop"
+                        data-description="UI and web development project using HTML & CSS for a flower shop page layout."
+                        aria-label="Open Notes Flowershop (UI + Web Dev)">
+                        <div class="work-card-image">
+                            <img src="image/notes floweshop.mp4" alt="Notes Flowershop" class="works-img">
+                        </div>
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Notes Flowershop (UI + Web Dev)</b></p>
+                            <p class="work-card-desc">UI and web development project using HTML & CSS for a flower shop page layout.</p>
+                            <p class="work-card-tag">🔧 HTML/CSS</p>
+                        </div>
+                    </div>
+
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Simple Calculator App (Android Studio)"
+                        data-description="Simple calculator app built in Android Studio for basic arithmetic operations."
+                        aria-label="Open Simple Calculator App (Android Studio)">
+                        <div class="work-card-image">
+                            <img src="image/Simple Calculator App.jpg" alt="Simple Calculator App" class="works-img">
+                        </div>
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Simple Calculator App (Android Studio)</b></p>
+                            <p class="work-card-desc">Simple calculator app built in Android Studio for basic arithmetic operations.</p>
+                            <p class="work-card-tag">📱 Android Studio</p>
+                        </div>
+                    </div>
+
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="Simple Intent App (Android Studio)"
+                        data-description="Simple intent app built with Android components to demonstrate inter-activity communication."
+                        aria-label="Open Simple Intent App (Android Studio)">
+                        <div class="work-card-image">
+                            <img src="image/SimpleIntentApp.jpg" alt="Simple Intent App" class="works-img">
+                        </div>
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>Simple Intent App (Android Studio)</b></p>
+                            <p class="work-card-desc">Simple intent app built with Android components to demonstrate inter-activity communication.</p>
+                            <p class="work-card-tag">📱 Android Studio</p>
+                        </div>
+                    </div>
+
+                    <div class="work-item" role="button" tabindex="0"
+                        data-title="This Is How It Ends (With You) (Graphic Design)"
+                        data-description="Graphic design piece inspired by the ‘This Is How It Ends (With You)’ theme and composition."
+                        aria-label="Open This Is How It Ends (With You) (Graphic Design)">
+                        <div class="work-card-image">
+                            <img src="image/THIS IS HOW IT ENDS (WITH YOU).mov" alt="This Is How It Ends (With You)" class="works-img">
+                        </div>
+                        <div class="work-card-body">
+                            <p class="work-card-title"><b>This Is How It Ends (With You) (Graphic Design)</b></p>
+                            <p class="work-card-desc">Graphic design piece inspired by the ‘This Is How It Ends (With You)’ theme and composition.</p>
+                            <p class="work-card-tag">🎨 Graphic Design</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="work-category-content" id="work-website" style="display:none;" aria-live="polite">
-                <div class="work-placeholder">
-                    <h2>Website</h2>
-                    <p>Placeholder section for your future website projects.</p>
-                </div>
-            </div>
 
-            <div class="work-category-content" id="work-arts" style="display:none;" aria-live="polite">
-                <div class="work-placeholder">
-                    <h2>Arts</h2>
-                    <p>Placeholder section for your future arts projects.</p>
-                </div>
-            </div>
         </section>
+
+         <!-- Skills & Tools 3-column cards -->
+<section class="skills-board" aria-label="Skills & Tools">
+	<div class="skills-board-header" aria-hidden="false">
+		<h1>Skills &amp; Tools</h1>
+		<p>Technologies, software, and creative tools I use throughout my workflow.</p>
+	</div>
+                <div class="skills-board-grid corkboard-enhance">
+
+
+                    <div class="skills-card-panel">
+                    <div class="skills-card-left">
+                            <h2>Programming Languages</h2>
+                        </div>
+                        <div class="skills-card-mid">
+						<p style="margin: 8px 0 14px; font-family: 'Poppins', sans-serif; font-size: 0.95rem; color:#121212;">Core languages I use for building and scripting.</p>
+                            <div class="chip-row">
+
+                                <span class="skill-chip">Java</span>
+                                <span class="skill-chip">C</span>
+                                <span class="skill-chip">C#</span>
+                                <span class="skill-chip">HTML</span>
+                                <span class="skill-chip">CSS</span>
+                                <span class="skill-chip">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="skills-card-right" aria-hidden="true">
+                            <div class="skills-icon">⌘</div>
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="skills-card-panel">
+                        <div class="skills-card-left">
+                            <h2>Design & Editing</h2>
+                        </div>
+                        <div class="skills-card-mid">
+					<p style="margin: 8px 0 14px; font-family: 'Poppins', sans-serif; font-size: 0.95rem; color:#121212;">Creative tools for layouts, graphics, and video edits.</p>
+                            <div class="chip-row">
+
+                                <span class="skill-chip">Photoshop</span>
+                                <span class="skill-chip">Illustrator</span>
+                                <span class="skill-chip">figma</span>
+                                <span class="skill-chip">Canva</span>
+                                <span class="skill-chip">CapCut</span>
+                            </div>
+                        </div>
+                        <div class="skills-card-right" aria-hidden="true">
+                            <div class="skills-icon">✎</div>
+                        </div>
+                    </div>
+
+                    <div class="skills-card-panel">
+                        <div class="skills-card-left">
+                            <h2>Tools & Platforms</h2>
+                        </div>
+                        <div class="skills-card-mid">
+                            <div class="chip-row">
+                                <span class="skill-chip">VS Code</span>
+                                <span class="skill-chip">Git</span>
+                                <span class="skill-chip">GitHub</span>
+                            </div>
+                        </div>
+                        <div class="skills-card-right" aria-hidden="true">
+                            <div class="skills-icon">⚙</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
 		<section id="contact" class="contact-container">
 			<div class="contact-text">
 				<h2>Contact</h2>
@@ -153,7 +470,7 @@
 					<div class="input-group">
 						<label for="message">Message</label>
 						<textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-					</div>
+					</div> 
 					<button type="submit" class="contact-btn">Send Message</button>
 				</form>
 			</div>
@@ -193,6 +510,14 @@
 				
 		
 		</footer>
+
+		<!-- Lightbox Modal -->
+		<div id="lightbox" class="lightbox" aria-hidden="true" aria-label="Work details modal" role="dialog">
+			<span class="close-btn" aria-label="Close">&times;</span>
+			<img class="lightbox-content" id="lightbox-img" alt="Enlarged work image">
+			<div id="caption" class="caption" aria-live="polite"></div>
+		</div>
+
 		<p class = "copyright">COPYRIGHT 2025. ALL RIGHTS RESERVED.</p>
 		<script src="js/script.js"></script>
 	</body>
